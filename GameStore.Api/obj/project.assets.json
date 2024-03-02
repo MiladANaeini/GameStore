@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\WEB Projects\\GameStoreGit\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+      "projectUniqueName": "F:\\WEB Projects\\GameStoreGG\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
       "projectName": "GameStore.Api",
-      "projectPath": "F:\\WEB Projects\\GameStoreGit\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+      "projectPath": "F:\\WEB Projects\\GameStoreGG\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
       "packagesPath": "C:\\Users\\Milad\\.nuget\\packages\\",
-      "outputPath": "F:\\WEB Projects\\GameStoreGit\\GameStore\\GameStore.Api\\obj\\",
+      "outputPath": "F:\\WEB Projects\\GameStoreGG\\GameStore\\GameStore.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Milad\\AppData\\Roaming\\NuGet\\NuGet.Config",
