@@ -3,6 +3,8 @@ namespace GameStore.Api.Entities;
 public class Game
 {
     public int Id { get; set; }
+
+    [Required]
     public required string Name { get; set; }
     public required string Genre { get; set; }
     public decimal Price { get; set; }
