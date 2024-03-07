@@ -2,9 +2,9 @@ using GameStore.Api.Entities;
 
 namespace GameStore.Api.Repositories;
 
-    public class InMemGamesRepository
-    {
-        private readonly List <Game> games = new()
+public class InMemGamesRepository : IGamesRepository
+{
+    private readonly List<Game> games = new()
 {
     new Game()
     {
@@ -38,24 +38,29 @@ namespace GameStore.Api.Repositories;
     },
 };
 
-public IEnumerable<Game> GetAll(){
-    return games;
-}
+    public IEnumerable<Game> GetAll()
+    {
+        return games;
+    }
 
-public Game? Get(int id){
-    return games.Find(game => game.Id == id);
-}
+    public Game? Get(int id)
+    {
+        return games.Find(game => game.Id == id);
+    }
 
-public void Create(Game game){
-    game.Id = games.Max(game => game.Id) +1;
-       games.Add(game);
-}
-public void Update(Game updateGame){
-    var index = games.FindIndex(game => game.Id == updateGame.Id);
-    games[index] = updateGame;
-}
-public void Delete(int id){
+    public void Create(Game game)
+    {
+        game.Id = games.Max(game => game.Id) + 1;
+        games.Add(game);
+    }
+    public void Update(Game updateGame)
+    {
+        var index = games.FindIndex(game => game.Id == updateGame.Id);
+        games[index] = updateGame;
+    }
+    public void Delete(int id)
+    {
         var index = games.FindIndex(game => game.Id == id);
         games.RemoveAt(index);
-}
     }
+}
