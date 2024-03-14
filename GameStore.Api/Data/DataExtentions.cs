@@ -4,11 +4,11 @@ using GameStore.Api.Repositories;
 
 public static class DataExtentions
 {
-    public static void InitializeDb(this IServiceProvider serviceProvider)
+    public static async Task InitializeDbAsync(this IServiceProvider serviceProvider)
     {
         using var scope = serviceProvider.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<GameStoreContext>();
-        dbContext.Database.Migrate();
+        await dbContext.Database.MigrateAsync();
         
     }
 
